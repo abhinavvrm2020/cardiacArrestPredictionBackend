@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the model and class names
 model = joblib.load('app/xgboost_model.joblib')
-class_names = np.array(['Yes', 'No'])
+class_names = np.array(['No', 'Yes'])
 
 # Initialize FastAPI app
 app = FastAPI()
