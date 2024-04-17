@@ -30,7 +30,7 @@ def predict(data: dict):
             int(data['Age']),  
             1 if data['Diabetic'] == 'Yes' else 0,
             1 if data['PhysicalActivity'] == 'Yes' else 0,
-            0 if data['GenHealth'] in ['Excellent'] else 4 if data['GenHealth'] in ['Very good'] else 2 if data['GenHealth'] in ['Good'] else 1 if data['GenHealth'] in ['Fair'] else 4
+            0 if data['GenHealth'] in ['Excellent'] else 4 if data['GenHealth'] in ['Very good'] else 2 if data['GenHealth'] in ['Good'] else 1 if data['GenHealth'] in ['Fair'] else 4,
             int(data['SleepTime']),
             1 if data['Asthma'] == 'Yes' else 0,
             1 if data['KidneyDisease'] == 'Yes' else 0,
