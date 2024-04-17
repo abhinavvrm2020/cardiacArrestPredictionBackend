@@ -25,12 +25,12 @@ def predict(data: dict):
             1 if data['Stroke'] == 'Yes' else 0,
             int(data['PhysicalHealth']),
             int(data['MentalHealth']),
-            1 if data['Sex'] == 'Male' else 1,  # Encode Female as 0, Male as 1
+            1 if data['DiffWalking'] == 'Yes' else 0,
+            1 if data['Sex'] == 'Male' else 0,  # Encode Female as 0, Male as 1
             int(data['Age']),  
-            1 if data['Race'] == 'White' else 0,  # Encode White as 1, Black as 0
             1 if data['Diabetic'] == 'Yes' else 0,
             1 if data['PhysicalActivity'] == 'Yes' else 0,
-            1 if data['GenHealth'] in ['Very good', 'Good', 'Excellent'] else 0,  # Encode Very good, Good, Excellent as 1, otherwise 0
+            0 if data['GenHealth'] in ['Excellent'] else 4 if data['GenHealth'] in ['Very good'] else 2 if data['GenHealth'] in ['Good'] else 1 if data['GenHealth'] in ['Fair'] else 4
             int(data['SleepTime']),
             1 if data['Asthma'] == 'Yes' else 0,
             1 if data['KidneyDisease'] == 'Yes' else 0,
